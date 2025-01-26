@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #ff6347;
+    color: white;
+}
+
+.container {
+    background: #fff;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.img-area {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 5px solid black;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info {
+    text-align: center;
+    margin-left: 0;
+}
+
+.name-title {
+    background-color: white; 
+    border-radius: 10px; 
+    padding: 20px; 
+    width: fit-content; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.name-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    display: inline-block;
+    border-bottom: 2px solid black; 
+    padding-bottom: 5px; 
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 1;
+    padding: 30px;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.left p, .left ul li {
+    line-height: 2;
+    margin: 10px 0;
+}
+
+.personal-info-heading, .skills-heading, .achievements-heading, 
+.work-experience-heading, .references-heading {
+    background: #000;
+    padding: 15px;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.skills ul, .achievements ul, .work-experience ul {
+    padding-left: 20px;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+}
+
+.right h3 {
+    margin-bottom: 15px;
+}
+
+.right p {
+    line-height: 2.9;
+}
+
+.right ul li {
+    line-height: 2;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 20px 0;
+}
+
+.collapsible-checkbox {
+    display: none;
+}
+
+.collapsible-label {
+    position: relative;
+    font-weight: 600;
+    background-color: #fff;
+    color: black; 
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px 10px; 
+    border-radius: 4px;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+
+.collapsible-label .arrow {
+    display: none;
+}
+
+
+.collapsible-label:hover {
+    background-color: #c3c0b3; 
+}
+
+.collapsible-checkbox:checked + .collapsible-label .arrow {
+    transform: rotate(180deg); 
+}
+
+.collapsible-text {
+    max-height: 0;
+    overflow: hidden;
+    overflow-y: auto; 
+    border-radius: 4px;
+    line-height: 1.4;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible-checkbox:checked + .collapsible-label + .collapsible-text {
+    max-height: 200px;
+}
+
+.profile-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+    }
+
+    .personal-info-heading, .skills-heading, .achievements-heading,
+    .work-experience-heading, .references-heading {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .header {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .contact-info h1 {
+        font-size: 1.5rem; 
+    }
+
+    .contact-info p {
+        font-size: 1rem;    
+    }
+    
+    .main {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .personal-info-heading, .skills-heading, .achievements-heading,
+    .work-experience-heading, .references-heading {
+        font-size: 15px;
+    }
+}
